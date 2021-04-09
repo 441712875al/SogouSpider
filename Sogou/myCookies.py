@@ -1,0 +1,11 @@
+import json
+
+cookies = [
+    "SNUID=B5792DAB8C8E330DDA71C9B78C92BAC9; refresh=1; seccodeRight=success; successCount=1|Fri,09 Apr 2021 09:01:29 GMT; ppmdig=16179585720000002f0868f6186095a4287d2bfe45a4b9dc; passport=5|1617946079|1619155679|dHJ1c3Q6MToxfGNsaWVudGlkOjQ6MjAxN3x1bmlxbmFtZTo2MzolRTglQjAlODElRTUlOEQlQTAlRTclOTQlQTglRTYlODglOTElRTYlOTglQjUlRTclQTclQjAlRTQlQkElODZ8Y3J0OjEwOjE2MTc5NDYwNzl8cmVmbmljazo2MzolRTglQjAlODElRTUlOEQlQTAlRTclOTQlQTglRTYlODglOTElRTYlOTglQjUlRTclQTclQjAlRTQlQkElODZ8dXNlcmlkOjQ0Om85dDJsdU5Lc0p4c2VqY3hmQUh1M2cwUlhpQW9Ad2VpeGluLnNvaHUuY29tfA|f60fcb8ab8|IPwGqoR_1hlliJro8xZq7Xz6B6GEoj_gerH-zBmG01SWfHbo1J9hoJFD3b0lPqddxzv3AuwUeLXKuzsVEyW2wAkwI6tVR8jEOzZxaJwptc3DXRHVB9l27Ng58OGXOMgSswOUGiR0qvofparS89h20ccDxGe7v3l0JlinkpmmxFo; ppinf=5|1617946079|1619155679|dHJ1c3Q6MToxfGNsaWVudGlkOjQ6MjAxN3x1bmlxbmFtZTo2MzolRTglQjAlODElRTUlOEQlQTAlRTclOTQlQTglRTYlODglOTElRTYlOTglQjUlRTclQTclQjAlRTQlQkElODZ8Y3J0OjEwOjE2MTc5NDYwNzl8cmVmbmljazo2MzolRTglQjAlODElRTUlOEQlQTAlRTclOTQlQTglRTYlODglOTElRTYlOTglQjUlRTclQTclQjAlRTQlQkElODZ8dXNlcmlkOjQ0Om85dDJsdU5Lc0p4c2VqY3hmQUh1M2cwUlhpQW9Ad2VpeGluLnNvaHUuY29tfA; ppinfo=9d4e41ace2; pprdig=IPwGqoR_1hlliJro8xZq7Xz6B6GEoj_gerH-zBmG01SWfHbo1J9hoJFD3b0lPqddxzv3AuwUeLXKuzsVEyW2wAkwI6tVR8jEOzZxaJwptc3DXRHVB9l27Ng58OGXOMgSswOUGiR0qvofparS89h20ccDxGe7v3l0JlinkpmmxFo; sgid=15-52181709-AWBv5dibmlzM195zJU5z9GfA; JSESSIONID=aaaFSU4Al_-FE4JGgUGGx; PHPSESSID=0e4k9hhj1b7857oagc0ca647g6; LCLKINT=1827; LSTMV=218%2C77; ld=Zlllllllll2kbt77lllllpxmcWolllllJf4hnyllll9llllljllll5@@@@@@@@@@; SUID=39F2A1273322910A00000000606DCAC8; weixinIndexVisited=1; IPLOC=CN3601; SUID=39F2A1272423910A00000000606DCAC8; ABTEST=8|1617808071|v1; SUV=00233D0BAF0514C160255CB6D2528446",
+]
+
+def getCookie(cookieStr):
+    cookieDict = {i.split("=")[0]:i.split("=")[1] for i in cookieStr.split("; ")}
+    return cookieDict
+
+cookies = [getCookie(cookieStr) for cookieStr in cookies]
